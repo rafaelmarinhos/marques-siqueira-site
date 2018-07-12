@@ -1,0 +1,32 @@
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { PremiosComponent } from './premios/premios.component';
+import { ClientesComponent } from './clientes/clientes.component';
+import { SobreVideosComponent } from './sobre-videos/sobre-videos.component';
+import { LinksComponent } from './links/links.component';
+import { EquipeComponent } from './equipe/equipe.component';
+import { EquipeDetalheComponent } from './equipe-detalhe/equipe-detalhe.component';
+import { AreasComponent } from './areas/areas.component';
+import { NoticiasComponent } from './noticias/noticias.component';
+import { AreasDetalheComponent } from './areas-detalhe/areas-detalhe.component';
+import { NoticiasDetalheComponent } from './noticias-detalhe/noticias-detalhe.component';
+import { PremioDetalheComponent } from './premio-detalhe/premio-detalhe.component';
+
+export const ROUTES: Routes = [
+    { path: '', component: HomeComponent },
+    { path: 'sobre', component: SobreComponent },
+    { path: 'premios', component: PremiosComponent },
+    { path: 'premio-detalhe', component: PremioDetalheComponent },
+    { path: 'clientes', component: ClientesComponent },
+    { path: 'videos', component: SobreVideosComponent },
+    { path: 'links', component: LinksComponent },
+    { path: 'contato', component: ContactComponent },
+    { path: 'equipe', component: EquipeComponent },
+    { path: 'equipe-detalhe', component: EquipeDetalheComponent },
+    { path: 'areas', component: AreasComponent },
+    { path: 'areas-detalhe', component: AreasDetalheComponent },
+    { path: 'noticias', component: NoticiasComponent },
+    { path: 'noticias-detalhe', component: NoticiasDetalheComponent }
+];

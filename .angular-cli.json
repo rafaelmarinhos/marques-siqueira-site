@@ -1,0 +1,99 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "site"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "../node_modules/theme/vendor/bootstrap/css/bootstrap.min.css",
+        "../node_modules/theme/vendor/font-awesome/css/font-awesome.min.css",
+        "../node_modules/theme/vendor/simple-line-icons/css/simple-line-icons.min.css",
+        "../node_modules/theme/vendor/owl.carousel/assets/owl.carousel.min.css",
+        "../node_modules/theme/vendor/owl.carousel/assets/owl.theme.default.min.css",
+        "../node_modules/theme/vendor/magnific-popup/magnific-popup.min.css",
+        "../node_modules/theme/css/theme.css",
+        "../node_modules/theme/css/theme-elements.css",
+        "../node_modules/theme/css/theme-blog.css",
+        "../node_modules/theme/css/theme-shop.css",
+        "../node_modules/theme/css/theme-animate.css",
+        "../node_modules/theme/vendor/rs-plugin/css/settings.css",
+        "../node_modules/theme/vendor/rs-plugin/css/layers.css",
+        "../node_modules/theme/vendor/rs-plugin/css/navigation.css",
+        "../node_modules/theme/css/skins/skin-law-firm.css",
+        "../node_modules/theme/css/demos/demo-law-firm.css",
+        "../node_modules/theme/css/custom.css",
+        "styles.css"
+      ],
+      "scripts": [
+        "../node_modules/theme/vendor/jquery/jquery.min.js",
+        "../node_modules/theme/vendor/jquery.appear/jquery.appear.min.js",
+        "../node_modules/theme/vendor/jquery.easing/jquery.easing.min.js",
+        "../node_modules/theme/vendor/jquery-cookie/jquery-cookie.min.js",
+        "../node_modules/theme/vendor/bootstrap/js/bootstrap.min.js",
+        "../node_modules/theme/vendor/common/common.min.js",
+        "../node_modules/theme/vendor/jquery.validation/jquery.validation.min.js",
+        "../node_modules/theme/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js",
+        "../node_modules/theme/vendor/jquery.gmap/jquery.gmap.min.js",
+        "../node_modules/theme/vendor/jquery.lazyload/jquery.lazyload.min.js",
+        "../node_modules/theme/vendor/isotope/jquery.isotope.min.js",
+        "../node_modules/theme/vendor/owl.carousel/owl.carousel.min.js",
+        "../node_modules/theme/vendor/magnific-popup/jquery.magnific-popup.min.js",
+        "../node_modules/theme/vendor/vide/vide.min.js",
+        "../node_modules/theme/js/theme.js",
+        "../node_modules/theme/vendor/rs-plugin/js/jquery.themepunch.tools.min.js",
+        "../node_modules/theme/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js",
+        "../node_modules/theme/js/views/view.contact.js",
+        "../node_modules/theme/js/demos/demo-law-firm.js",
+        "../node_modules/theme/js/custom.js",
+        "../node_modules/theme/js/theme.init.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

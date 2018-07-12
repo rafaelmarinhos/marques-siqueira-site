@@ -1,0 +1,77 @@
+<div role="main" class="main">
+  <div class="container">
+    <div class="row pt-xl mb-lg">
+      <div class="col-lg-7">
+        <h1 class="mt-xl mb-none">Contato</h1>
+        <p class="lead mb-xl mt-lg">Fique à vontade para nos enviar uma mensagem</p>
+        <div class="divider divider-primary divider-small mb-xl">
+          <hr>
+        </div>
+        <form id="contactForm" action="php/contact-form.php" method="POST">
+          <div class="row">
+            <div class="form-group col-md-12">
+              <input type="text" placeholder="Seu nome" value="" data-msg-required="Campo obrigatório." maxlength="100" class="form-control form-control-lg"
+                name="name" id="name" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-12">
+              <input type="email" placeholder="Seu email" value="" data-msg-required="Campo obrigatório." data-msg-email="Por favor digite um e-mail válido."
+                maxlength="100" class="form-control form-control-lg" name="email" id="email" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-12">
+              <input type="text" placeholder="Assunto" value="" data-msg-required="Campo obrigatório." maxlength="100" class="form-control form-control-lg"
+                name="subject" id="subject" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-12">
+              <textarea maxlength="5000" placeholder="Mensagem" data-msg-required="Campo obrigatório." rows="5" class="form-control form-control-lg"
+                name="message" id="message" required></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-12">
+              <input type="submit" value="Enviar Mensagem" class="btn btn-primary btn-lg mb-5" data-loading-text="Loading...">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-4 col-lg-offset-1">
+        <br />
+        <h4 class="mb-0">Escritório</h4>
+        <div class="divider divider-primary divider-small mb-4">
+          <hr class="mr-auto">
+        </div>
+        <ul class="list list-icons list-icons-style-3 mt-4 mb-4">
+          <li>
+            <i class="fa fa-map-marker"></i>
+            <strong>Endereço:</strong> {{ (informacoesGerais | async)?.endereco }}</li>
+          <li>
+            <i class="fa fa-phone"></i>
+            <strong>Goiânia:</strong> {{ (informacoesGerais | async)?.telefone_goiania }}</li>
+          <li>
+            <i class="fa fa-phone"></i>
+            <strong>Brasília:</strong> {{ (informacoesGerais | async)?.telefone_brasilia }}</li>          
+          <li>
+            <i class="fa fa-envelope"></i>
+            <strong>Email:</strong>
+            <a href="mailto:marquessiqueira@marquessiqueira.com.br">{{ (informacoesGerais | async)?.email }}</a>
+          </li>
+        </ul>
+        <br />
+        <br />
+        <h4 class="pt-4 mb-0">Horário de Funcionamento</h4>
+        <div class="divider divider-primary divider-small mb-4">
+          <hr class="mr-auto">
+        </div>
+        <ul class="list list-icons list-dark mt-4">
+          <li>
+            <i class="fa fa-clock-o"></i> {{ (informacoesGerais | async)?.horario_funcionamento }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+<footer class="short" id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h5 class="mb-sm">Endereço</h5>
+        <ul class="list list-icons mt-xl">
+          <li>
+            <i class="fa fa-map-marker"></i>
+            <strong></strong> {{ (informacoesGerais | async)?.endereco }}</li>
+          <li>
+            <i class="fa fa-envelope"></i>
+            <strong>Email:</strong>
+            <a href="mailto:mail@example.com">{{ (informacoesGerais | async)?.email }}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-md-offset-1">
+        <h5 class="mb-sm">Goiânia</h5>
+        <span class="phone">{{ (informacoesGerais | async)?.telefone_goiania }}</span>
+        <ul class="social-icons mt-lg">
+          <li class="social-icons-facebook">
+            <a href="http://www.facebook.com/" target="_blank" title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="social-icons-twitter">
+            <a href="http://www.twitter.com/" target="_blank" title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="social-icons-linkedin">
+            <a href="http://www.linkedin.com/" target="_blank" title="Linkedin">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5 class="mb-sm">Brasília</h5>
+        <span class="phone">{{ (informacoesGerais | async)?.telefone_brasilia }}</span>
+        <ul class="social-icons mt-lg">
+          <li class="social-icons-facebook">
+            <a href="http://www.facebook.com/" target="_blank" title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="social-icons-twitter">
+            <a href="http://www.twitter.com/" target="_blank" title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="social-icons-linkedin">
+            <a href="http://www.linkedin.com/" target="_blank" title="Linkedin">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>© Copyright 2016. Todos os direitos reservados. |
+            <a href="contato.html">Contato</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
