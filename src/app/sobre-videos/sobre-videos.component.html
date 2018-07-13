@@ -7,70 +7,15 @@
                 <div class="divider divider-primary divider-small mb-xl">
                     <hr>
                 </div>
-                <div class="row mt-xl">
+                <div class="row mt-xl" *ngFor="let video of videos | async">
                     <div class="col-md-6">
                         <div class="embed-responsive embed-responsive-16by9 mb-xl">
-                            <iframe src="http://www.youtube.com/embed/wIRUGk9Q49I?origin=http://example.com" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                            <iframe [src]="transform(video)" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h1 class="mt-xl mb-none">Título de Cidadão Goiano</h1>
-                        <p style="text-align: justify" class="lead mb-xl mt-lg">Sessão Solene de entrega do Título de Cidadão Goiano ao Advogado Dr. Walter Marques Siqueira. A Cerimônia aconteceu dia 26 de novembro as 19h45min.</p>
-                    </div>
-                </div>
-                <div class="row mt-xl">
-                    <div class="col-md-6">
-                        <div class="embed-responsive embed-responsive-16by9 mb-xl">
-                            <iframe src="http://www.youtube.com/embed/L-Cukd9j2YM?origin=http://example.com" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h1 class="mt-xl mb-none">Vídeo Institucional</h1>
-                        <p style="text-align: justify" class="lead mb-xl mt-lg">Conheça a Marques Siqueira.</p>
-                    </div>
-                </div>
-                <div class="row mt-xl">
-                    <div class="col-md-6">
-                        <div class="embed-responsive embed-responsive-16by9 mb-xl">
-                            <iframe src="http://www.youtube.com/embed/9KLiOh4X0To?origin=http://example.com" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h1 class="mt-xl mb-none">Premiação</h1>
-                        <p style="text-align: justify" class="lead mb-xl mt-lg">Intercontinental Union For Quality em 26/05/2012 – Rio de Janeiro – RJ (Prêmio Quality Awards).</p>
-                    </div>
-                </div>
-                <div class="row mt-xl">
-                    <div class="col-md-6">
-                        <div class="embed-responsive embed-responsive-16by9 mb-xl">
-                            <iframe src="http://www.youtube.com/embed/taNrdnInYv8?origin=http://example.com" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h1 class="mt-xl mb-none">Entrevista</h1>
-                        <p style="text-align: justify" class="lead mb-xl mt-lg">Jornal Anhanguera – Indenização de enfermeira.</p>
-                    </div>
-                </div>
-                <div class="row mt-xl">
-                    <div class="col-md-6">
-                        <div class="embed-responsive embed-responsive-16by9 mb-xl">
-                            <iframe src="http://www.youtube.com/embed/hKTIfhKXOSQ?origin=http://example.com" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h1 class="mt-xl mb-none">Desaposentação e Fator previdenciário</h1>
-                        <p style="text-align: justify" class="lead mb-xl mt-lg">ASNAB 2012.</p>
-                    </div>
-                </div>
-                <div class="row mt-xl">
-                    <div class="col-md-6">
-                        <div class="embed-responsive embed-responsive-16by9 mb-xl">
-                            <iframe src="http://www.youtube.com/embed/rPpDGs3Prjs?origin=http://example.com" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h1 class="mt-xl mb-none">Entrevista</h1>
-                        <p style="text-align: justify" class="lead mb-xl mt-lg">Jornal 12ª hora – Quadro Profissão Cidadão.</p>
+                        <h1 class="mt-xl mb-none">{{ video.titulo }}</h1>
+                        <p style="text-align: justify" class="lead mb-xl mt-lg">{{ video.descricao }}</p>
                     </div>
                 </div>
             </div>

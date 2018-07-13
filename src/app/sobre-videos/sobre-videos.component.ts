@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
+import { VideoModel } from '../models/video.model';
+import { Observable } from 'rxjs/Observable';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-sobre-videos',
@@ -6,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SobreVideosComponent implements OnInit {
 
-  constructor() { }
+  private videosColecao: AngularFirestoreCollection<VideoModel>;
+  videos: Observable<VideoModel[]>;
+
+  constructor(public DB: AngularFirestore, public sanitizer: DomSanitizer) {
+
+    // TODO: Ordenar por data de criação
+    this.videosColecao = DB.collection<VideoModel>('videos');
+    this.videos = this.videosColecao.valueChanges();
+  }
+
+  transform(video: VideoModel) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(video.id_video);
+  }
 
   ngOnInit() {
   }
-
 }

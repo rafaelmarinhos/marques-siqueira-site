@@ -13,7 +13,7 @@ export class NoticiasComponent implements OnInit {
   private noticiasColecao: AngularFirestoreCollection<NoticiaModel>;
   noticias: Observable<NoticiaModel[]>;
 
-  constructor(public DB: AngularFirestore, private router: Router) {
+  constructor(public DB: AngularFirestore) {
 
     // TODO: Ordenar por data de criação
     this.noticiasColecao = DB.collection<NoticiaModel>('noticias');
