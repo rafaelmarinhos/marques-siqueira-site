@@ -28,5 +28,5 @@ export const ROUTES: Routes = [
     { path: 'areas', component: AreasComponent },
     { path: 'areas-detalhe', component: AreasDetalheComponent },
     { path: 'noticias', component: NoticiasComponent },
-    { path: 'noticias-detalhe', component: NoticiasDetalheComponent }
+    { path: 'noticias-detalhe/:id', component: NoticiasDetalheComponent }
 ];

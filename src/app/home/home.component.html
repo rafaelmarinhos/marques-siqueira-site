@@ -296,17 +296,17 @@
       </div>
     </div>
     <div class="row mt-xl">
-      <div class="col-md-6">
+      <div class="col-md-6" *ngIf="noticia_home_1">
         <span class="thumb-info thumb-info-side-image thumb-info-no-zoom mb-xl">
           <span class="thumb-info-side-image-wrapper p-none hidden-xs">
-            <a title="" href="demo-law-firm-news-detail.html">
-              <img src="../../assets/img/noticias/blog-law-firm-1.jpg" class="img-responsive" alt="" style="width: 195px;">
+            <a title="" [routerLink]="['/noticias-detalhe', (noticia_home_1 | async)?.id]">
+              <img src="{{ (noticia_home_1 | async)?.imagem }}" class="img-responsive" alt="" style="width: 195px; height: 235px;">
             </a>
           </span>
           <span class="thumb-info-caption">
             <span class="thumb-info-caption-text">
               <h2 class="mb-md mt-xs">
-                <a title="" class="text-dark" href="noticias/honorarios-de-advogado-contratado-para-ajuizar-recuperacao-devem-ter-privilegio-na-falencia.html">{{ (noticia_home_1 | async)?.titulo }}</a>
+                <a title="" class="text-dark" [routerLink]="['/noticias-detalhe', (noticia_home_1 | async)?.id]">{{ (noticia_home_1 | async)?.titulo_home }}</a>
               </h2>
               <span class="post-meta">
                 <span>{{ (noticia_home_1 | async)?.data }}
@@ -314,24 +314,24 @@
                 </span>
               </span>
               <p class="font-size-md">{{ (noticia_home_1 | async)?.descricao_resumida }}</p>
-              <a class="mt-md" href="noticias/honorarios-de-advogado-contratado-para-ajuizar-recuperacao-devem-ter-privilegio-na-falencia.html">Leia mais...
+              <a class="mt-md" [routerLink]="['/noticias-detalhe', (noticia_home_1 | async)?.id]">Leia mais...
                 <i class="fa fa-long-arrow-right"></i>
               </a>
             </span>
           </span>
         </span>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" *ngIf="noticia_home_2">
         <span class="thumb-info thumb-info-side-image thumb-info-no-zoom mb-xl">
           <span class="thumb-info-side-image-wrapper p-none hidden-xs">
-            <a title="" href="demo-law-firm-news-detail.html">
-              <img src="../../assets/img/noticias/blog-law-firm-2.jpg" class="img-responsive" alt="" style="width: 195px;">
+            <a title="" [routerLink]="['/noticias-detalhe', (noticia_home_2 | async)?.id]">
+              <img src="{{ (noticia_home_2 | async)?.imagem }}" class="img-responsive" alt="" style="width: 195px; height: 235px;">
             </a>
           </span>
           <span class="thumb-info-caption">
             <span class="thumb-info-caption-text">
               <h2 class="mb-md mt-xs">
-                <a title="" class="text-dark" href="noticias/honorarios-de-advogado-contratado-para-ajuizar-recuperacao-devem-ter-privilegio-na-falencia.html">{{ (noticia_home_2 | async)?.titulo }}</a>
+                <a title="" class="text-dark" [routerLink]="['/noticias-detalhe', (noticia_home_2 | async)?.id]">{{ (noticia_home_2 | async)?.titulo_home }}</a>
               </h2>
               <span class="post-meta">
                 <span>{{ (noticia_home_2 | async)?.data }}
@@ -339,7 +339,7 @@
                 </span>
               </span>
               <p class="font-size-md">{{ (noticia_home_2 | async)?.descricao_resumida }}</p>
-              <a class="mt-md" href="noticias/honorarios-de-advogado-contratado-para-ajuizar-recuperacao-devem-ter-privilegio-na-falencia.html">Leia mais...
+              <a class="mt-md" [routerLink]="['/noticias-detalhe', (noticia_home_2 | async)?.id]">Leia mais...
                 <i class="fa fa-long-arrow-right"></i>
               </a>
             </span>

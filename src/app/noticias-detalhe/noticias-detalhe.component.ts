@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { AngularFirestoreDocument, AngularFirestore } from 'angularfire2/firestore';
+import { NoticiaModel } from '../models/noticia.model';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-noticias-detalhe',
@@ -6,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoticiasDetalheComponent implements OnInit {
 
-  constructor() { }
+  private noticiaDocument: AngularFirestoreDocument<NoticiaModel>;
+  noticia: Observable<NoticiaModel>;
+
+  constructor(private route: ActivatedRoute, public DB: AngularFirestore) {
+    console.log(this.route.snapshot.params['id']);
+
+    this.noticiaDocument = this.DB.doc<NoticiaModel>('/noticias/' + this.route.snapshot.params['id']);
+    this.noticia = this.noticiaDocument.valueChanges();
+  }
 
   ngOnInit() {
   }
-
 }
