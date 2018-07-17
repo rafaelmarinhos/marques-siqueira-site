@@ -1,0 +1,38 @@
+<div role="main" class="main">
+  <div class="container">
+    <div class="row pt-xl mb-lg">
+      <div class="col-md-12">
+        <h1 class="mt-xl mb-none">Eventos</h1>
+        <p class="lead mb-xl mt-lg">Fique por dentro dos eventos que a Marques Siqueira realiza ou participa</p>
+        <div class="divider divider-primary divider-small mb-xl">
+          <hr>
+        </div>
+        <div class="row mt-xl">
+          <div class="col-md-12" *ngFor="let evento of eventos | async">
+            <span class="thumb-info thumb-info-side-image thumb-info-no-zoom mt-xl">
+              <span class="thumb-info-side-image-wrapper p-none hidden-xs">
+                <a title="" [routerLink]="['/evento-detalhe', evento.id]">
+                  <img src="{{ evento.imagem }}" class="img-responsive" alt="" style="width: 195px; height: 235px;">
+                </a>
+              </span>
+              <span class="thumb-info-caption">
+                <span class="thumb-info-caption-text">
+                  <h2 class="mb-md mt-xs">
+                    <a title="" class="text-dark" [routerLink]="['/evento-detalhe', evento.id]">{{ evento.titulo }}</a>
+                  </h2>
+                  <span class="post-meta">
+                    <span>{{ evento.data }}</span>
+                  </span>
+                  <p class="font-size-md" style="text-align: justify;">{{ evento.descricao_resumida }}</p>
+                  <a class="mt-md" [routerLink]="['/evento-detalhe', evento.id]">Leia mais
+                    <i class="fa fa-long-arrow-right"></i>
+                  </a>
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

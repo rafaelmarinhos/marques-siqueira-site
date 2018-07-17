@@ -13,6 +13,8 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { AreasDetalheComponent } from './areas-detalhe/areas-detalhe.component';
 import { NoticiasDetalheComponent } from './noticias-detalhe/noticias-detalhe.component';
 import { PremioDetalheComponent } from './premio-detalhe/premio-detalhe.component';
+import { EventosComponent } from './eventos/eventos.component';
+import { EventoDetalheComponent } from './evento-detalhe/evento-detalhe.component';
 
 export const ROUTES: Routes = [
     { path: '', component: HomeComponent },
@@ -28,5 +30,7 @@ export const ROUTES: Routes = [
     { path: 'areas', component: AreasComponent },
     { path: 'areas-detalhe', component: AreasDetalheComponent },
     { path: 'noticias', component: NoticiasComponent },
-    { path: 'noticias-detalhe/:id', component: NoticiasDetalheComponent }
+    { path: 'noticias-detalhe/:id', component: NoticiasDetalheComponent },
+    { path: 'eventos', component: EventosComponent },
+    { path: 'evento-detalhe/:id', component: EventoDetalheComponent }
 ];

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestoreCollection, AngularFirestore } from '../../../node_modules/angularfire2/firestore';
+import { ClienteModel } from '../models/cliente.model';
+import { Observable } from '../../../node_modules/rxjs/Observable';
 
 @Component({
   selector: 'app-clientes',
@@ -6,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientesComponent implements OnInit {
 
-  constructor() { }
+  private clientesColecao: AngularFirestoreCollection<ClienteModel>;
+  clientes: Observable<ClienteModel[]>;
+
+  constructor(public DB: AngularFirestore) {
+    this.clientesColecao = DB.collection<ClienteModel>('clientes', ref => ref.orderBy('nome'));
+    this.clientes = this.clientesColecao.valueChanges();
+  }
 
   ngOnInit() {
   }
-
 }

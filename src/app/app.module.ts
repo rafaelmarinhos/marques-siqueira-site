@@ -26,6 +26,8 @@ import { NoticiasDetalheComponent } from './noticias-detalhe/noticias-detalhe.co
 import { AreasDetalheComponent } from './areas-detalhe/areas-detalhe.component';
 import { PremioDetalheComponent } from './premio-detalhe/premio-detalhe.component';
 import { Environment } from './app.env';
+import { EventosComponent } from './eventos/eventos.component';
+import { EventoDetalheComponent } from './evento-detalhe/evento-detalhe.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { Environment } from './app.env';
     NoticiasComponent,
     NoticiasDetalheComponent,
     AreasDetalheComponent,
-    PremioDetalheComponent
+    PremioDetalheComponent,
+    EventosComponent,
+    EventoDetalheComponent
   ],
   imports: [
     BrowserModule,
