@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestoreCollection, AngularFirestore } from '../../../node_modules/angularfire2/firestore';
+import { AssociadoModel } from '../models/associado.model';
+import { Observable } from '../../../node_modules/rxjs/Observable';
 
 @Component({
   selector: 'app-equipe',
@@ -6,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EquipeComponent implements OnInit {
 
-  constructor() { }
+  private funcionariosColecao: AngularFirestoreCollection<AssociadoModel>;
+  funcionarios: Observable<AssociadoModel[]>;
+
+  constructor(public DB: AngularFirestore) {
+    this.funcionariosColecao = DB.collection<AssociadoModel>('funcionarios');
+    this.funcionarios = this.funcionariosColecao.valueChanges();
+  }
 
   ngOnInit() {
   }
-
 }

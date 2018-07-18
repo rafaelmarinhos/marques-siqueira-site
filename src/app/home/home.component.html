@@ -18,7 +18,7 @@
           <div class="tp-caption bottom-label" data-x="left" data-hoffset="100" data-y="center" data-voffset="5" data-start="2000"
             style="z-index: 5" data-transform_in="y:[100%];opacity:0;s:500;">Disponibilidade, Agilidade e Competência</div>
 
-          <a class="tp-caption btn btn-primary btn-lg" href="sobre-empresa.html" data-x="left" data-hoffset="100" data-y="center" data-voffset="80"
+          <a class="tp-caption btn btn-primary btn-lg" [routerLink]="['/sobre']" data-x="left" data-hoffset="100" data-y="center" data-voffset="80"
             data-start="2500" data-whitespace="nowrap" data-transform_in="y:[100%];s:500;" data-transform_out="opacity:0;s:500;"
             style="z-index: 5" data-mask_in="x:0px;y:0px;">Conheça-nos</a>
 
@@ -56,7 +56,7 @@
             data-start="3000" data-transform_in="x:[-100%];opacity:0;s:500;">
             <i class="fa fa-check"></i> Relação de Consumo</div>
 
-          <a class="tp-caption btn btn-primary btn-lg" data-hash data-hash-offset="85" href="areas-atuacao.html" data-x="right" data-hoffset="100"
+          <a class="tp-caption btn btn-primary btn-lg" data-hash data-hash-offset="85" [routerLink]="['/areas']" data-x="right" data-hoffset="100"
             data-y="center" data-voffset="150" data-start="3500" data-whitespace="nowrap" data-transform_in="y:[100%];s:500;"
             data-transform_out="opacity:0;s:500;" style="z-index: 5" data-mask_in="x:0px;y:0px;">Veja todas
             <i class="fa fa-long-arrow-right"></i>
@@ -78,7 +78,7 @@
           <div class="tp-caption bottom-label" data-x="right" data-hoffset="100" data-y="center" data-voffset="5" data-start="2000"
             style="z-index: 5" data-transform_in="y:[100%];opacity:0;s:500;">Profissionais qualificados e especialistas nas mais diversas áreas do Judiciário.</div>
 
-          <a class="tp-caption btn btn-primary btn-lg" data-hash data-hash-offset="85" href="equipe-advogados.html" data-x="right"
+          <a class="tp-caption btn btn-primary btn-lg" data-hash data-hash-offset="85" [routerLink]="['/equipe']" data-x="right"
             data-hoffset="100" data-y="center" data-voffset="80" data-start="2500" data-whitespace="nowrap" data-transform_in="y:[100%];s:500;"
             data-transform_out="opacity:0;s:500;" style="z-index: 5" data-mask_in="x:0px;y:0px;">Conheça</a>
 
@@ -99,7 +99,7 @@
             aos interesses de seus constituintes e apoiada na ética e responsabilidade profissional. A experiência e a solidez
             de anos de atuação no meio jurídico mostram que somente assim, torna-se possível construir uma relação profissional
             duradoura entre o Escritório e o Cliente.</p>
-          <a class="mt-md" href="sobre-empresa.html"> Saiba mais
+          <a class="mt-md" [routerLink]="['/sobre']"> Saiba mais
             <i class="fa fa-long-arrow-right"></i>
           </a>
         </div>
@@ -111,7 +111,7 @@
           <p style="text-align: justify;" class="mt-lg">O Marques Siqueira Advogados Associados tem como objetivo promover o pleno exercício do direito de empresas e pessoas
             físicas, bem como satisfazer as necessidades para uma assessoria jurídica, preventiva e/ou contenciosa, nas áreas
             em que a equipe de advogados do Escritório atua...</p>
-          <a class="mt-md" href="sobre-empresa.html"> Saiba mais
+          <a class="mt-md" [routerLink]="['/sobre']"> Saiba mais
             <i class="fa fa-long-arrow-right"></i>
           </a>
         </div>
@@ -245,45 +245,6 @@
       </div>
     </div>
   </div>
-
-  <!-- INDICADORES -->
-  <!-- <section class="parallax section section-text-light section-parallax section-center mt-xl" data-plugin-parallax data-plugin-options='{"speed": 1.5}'
-    data-image-src="../../assets/img/parallax-law-firm-2.jpg">
-    <div class="container">
-      <div class="row">
-        <div class="counters counters-text-light">
-          <div class="col-md-3 col-sm-6">
-            <div class="counter mb-lg mt-lg">
-              <i class="icon-user-following icons"></i>
-              <strong data-to="150" data-append="+">0</strong>
-              <label>Clientes</label>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="counter mb-lg mt-lg">
-              <i class="icon-diamond icons"></i>
-              <strong data-to="15">0</strong>
-              <label>Anos de Mercado</label>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="counter mb-lg mt-lg">
-              <i class="icon-badge icons"></i>
-              <strong data-to="10">0</strong>
-              <label>Prêmios</label>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="counter mb-lg mt-lg">
-              <i class="icon-paper-plane icons"></i>
-              <strong data-to="500">0</strong>
-              <label>Casos de Sucesso</label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <!-- ULTIMAS NOTÍCIAS -->
   <div class="container">
