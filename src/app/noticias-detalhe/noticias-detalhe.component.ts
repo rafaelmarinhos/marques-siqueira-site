@@ -14,8 +14,6 @@ export class NoticiasDetalheComponent implements OnInit {
   noticia: Observable<NoticiaModel>;
 
   constructor(private route: ActivatedRoute, public DB: AngularFirestore) {
-    console.log(this.route.snapshot.params['id']);
-
     this.noticiaDocument = this.DB.doc<NoticiaModel>('/noticias/' + this.route.snapshot.params['id']);
     this.noticia = this.noticiaDocument.valueChanges();
   }

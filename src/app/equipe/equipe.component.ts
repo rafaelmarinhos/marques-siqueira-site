@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestoreCollection, AngularFirestore } from '../../../node_modules/angularfire2/firestore';
 import { AssociadoModel } from '../models/associado.model';
 import { Observable } from '../../../node_modules/rxjs/Observable';
+import { ActivatedRoute } from '../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-equipe',
@@ -12,11 +13,14 @@ export class EquipeComponent implements OnInit {
   private funcionariosColecao: AngularFirestoreCollection<AssociadoModel>;
   funcionarios: Observable<AssociadoModel[]>;
 
-  constructor(public DB: AngularFirestore) {
-    this.funcionariosColecao = DB.collection<AssociadoModel>('funcionarios');
+  constructor(public DB: AngularFirestore, private route: ActivatedRoute) {
+    const departamento = this.route.snapshot.params['tipo'];
+
+    this.funcionariosColecao = DB.collection<AssociadoModel>('funcionarios', ref => ref.where('tipo', '==', departamento));
     this.funcionarios = this.funcionariosColecao.valueChanges();
   }
 
   ngOnInit() {
+    console.log(this.route.snapshot.params['tipo']);
   }
 }

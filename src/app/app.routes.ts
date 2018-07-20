@@ -25,7 +25,7 @@ export const ROUTES: Routes = [
     { path: 'videos', component: SobreVideosComponent },
     { path: 'links', component: LinksComponent },
     { path: 'contato', component: ContactComponent },
-    { path: 'equipe', component: EquipeComponent },
+    { path: 'equipe/:tipo', component: EquipeComponent },
     { path: 'equipe-detalhe', component: EquipeDetalheComponent },
     { path: 'areas', component: AreasComponent },
     { path: 'areas-detalhe', component: AreasDetalheComponent },
