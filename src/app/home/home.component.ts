@@ -13,8 +13,8 @@ import { ParametrosModel } from '../models/parametros.model';
 })
 export class HomeComponent implements OnInit {
 
-  private associadosColecao: AngularFirestoreCollection<AssociadoModel>;
-  associados: Observable<AssociadoModel[]>;
+  private funcionariosColecao: AngularFirestoreCollection<AssociadoModel>;
+  funcionarios: Observable<AssociadoModel[]>;
 
   private noticia_home_1_doc: AngularFirestoreDocument<NoticiaModel>;
   noticia_home_1: Observable<NoticiaModel>;
@@ -23,8 +23,8 @@ export class HomeComponent implements OnInit {
   noticia_home_2: Observable<NoticiaModel>;
 
   constructor(public DB: AngularFirestore) {
-    this.associadosColecao = DB.collection<AssociadoModel>('equipe');
-    this.associados = this.associadosColecao.valueChanges();
+    this.funcionariosColecao = this.DB.collection<AssociadoModel>('funcionarios', ref => ref.where('tipo', '==', 'advogado'));
+    this.funcionarios = this.funcionariosColecao.valueChanges();
 
     this.DB.doc<ParametrosModel>(`/parametros/${Constantes.parametros_id}`)
       .valueChanges()

@@ -14,13 +14,12 @@ export class EquipeComponent implements OnInit {
   funcionarios: Observable<AssociadoModel[]>;
 
   constructor(public DB: AngularFirestore, private route: ActivatedRoute) {
-    const departamento = this.route.snapshot.params['tipo'];
-
-    this.funcionariosColecao = DB.collection<AssociadoModel>('funcionarios', ref => ref.where('tipo', '==', departamento));
-    this.funcionarios = this.funcionariosColecao.valueChanges();
   }
 
   ngOnInit() {
-    console.log(this.route.snapshot.params['tipo']);
+    this.route.params.subscribe(params => {
+      this.funcionariosColecao = this.DB.collection<AssociadoModel>('funcionarios', ref => ref.where('tipo', '==', params['tipo']));
+      this.funcionarios = this.funcionariosColecao.valueChanges();
+    });
   }
 }
