@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
 import { NoticiaModel } from '../models/noticia.model';
 import { Observable } from 'rxjs/Observable';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-noticias',

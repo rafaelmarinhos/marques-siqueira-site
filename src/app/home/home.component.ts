@@ -13,6 +13,9 @@ import { ParametrosModel } from '../models/parametros.model';
 })
 export class HomeComponent implements OnInit {
 
+  private noticia_home_1_UID: string;
+  private noticia_home_2_UID: string;
+
   private funcionariosColecao: AngularFirestoreCollection<AssociadoModel>;
   funcionarios: Observable<AssociadoModel[]>;
 
@@ -34,6 +37,9 @@ export class HomeComponent implements OnInit {
 
         this.noticia_home_2_doc = this.DB.doc<NoticiaModel>('/noticias/' + p.noticia_home_2);
         this.noticia_home_2 = this.noticia_home_2_doc.valueChanges();
+
+        this.noticia_home_1_UID = p.noticia_home_1;
+        this.noticia_home_2_UID = p.noticia_home_2;
       });
   }
 
