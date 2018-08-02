@@ -6,6 +6,7 @@ import { AssociadoModel } from '../models/associado.model';
 import { NoticiaModel } from '../models/noticia.model';
 import { Constantes } from '../global/constantes';
 import { ParametrosModel } from '../models/parametros.model';
+import { AreaAtuacaoModel } from '../models/area.model';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,9 @@ export class HomeComponent implements OnInit {
   private funcionariosColecao: AngularFirestoreCollection<AssociadoModel>;
   funcionarios: Observable<AssociadoModel[]>;
 
+  private areasColecao: AngularFirestoreCollection<AreaAtuacaoModel>;
+  areas: Observable<AreaAtuacaoModel[]>;
+
   private noticia_home_1_doc: AngularFirestoreDocument<NoticiaModel>;
   noticia_home_1: Observable<NoticiaModel>;
 
@@ -28,6 +32,9 @@ export class HomeComponent implements OnInit {
   constructor(public DB: AngularFirestore) {
     this.funcionariosColecao = this.DB.collection<AssociadoModel>('funcionarios', ref => ref.where('tipo', '==', 'advogado'));
     this.funcionarios = this.funcionariosColecao.valueChanges();
+
+    this.areasColecao = this.DB.collection<AreaAtuacaoModel>('areas', ref => ref.orderBy('nome'));
+    this.areas = this.areasColecao.valueChanges();
 
     this.DB.doc<ParametrosModel>(`/parametros/${Constantes.parametros_id}`)
       .valueChanges()

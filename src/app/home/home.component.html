@@ -21,7 +21,6 @@
           <a class="tp-caption btn btn-primary btn-lg" [routerLink]="['/sobre']" data-x="left" data-hoffset="100" data-y="center" data-voffset="80"
             data-start="2500" data-whitespace="nowrap" data-transform_in="y:[100%];s:500;" data-transform_out="opacity:0;s:500;"
             style="z-index: 5" data-mask_in="x:0px;y:0px;">Conheça-nos</a>
-
         </li>
 
         <li data-transition="fade" data-title="Àreas de Atuação" data-thumb="img/slide/slide-law-firm-2.jpg">
@@ -131,21 +130,21 @@
       </div>
     </div>
     <div class="row mt-lg">
-      <div class="col-md-4">
+      <div class="col-md-4" *ngFor="let area of areas | async">
         <div class="feature-box feature-box-style-2 mb-xl">
           <div class="feature-box-icon">
-            <img src="../../assets/img/icons/criminal-law.png" alt="" />
+            <img src="{{ area.imagem }}" alt="" />
           </div>
           <div class="feature-box-info ml-md">
-            <h4 class="mb-sm">Acesso ao STJ</h4>
-            <p>Atuação constante e qualificada no Superior Tribunal de Justiça (STJ), em Brasília...</p>
+            <h4 class="mb-sm">{{ area.nome }}</h4>
+            <p>{{ area.subtitulo }}</p>
             <a class="mt-md" href="areas-atuacao/acesso-stj.html">Saiba mais
               <i class="fa fa-long-arrow-right"></i>
             </a>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <!-- <div class="col-md-4">
         <div class="feature-box feature-box-style-2 mb-xl">
           <div class="feature-box-icon">
             <img src="../../assets/img/icons/business-law.png" alt="" />
@@ -172,9 +171,9 @@
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
-    <div class="row mt-md mb-xl">
+    <!-- <div class="row mt-lg">
       <div class="col-md-4">
         <div class="feature-box feature-box-style-2 mb-xl">
           <div class="feature-box-icon">
@@ -217,7 +216,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <!-- EQUIPE
