@@ -6,174 +6,34 @@
         <div class="divider divider-primary divider-small mb-xl">
           <hr>
         </div>
-        <p style="text-align: justify" class="lead mb-xl mt-lg">Ao longo da sua existência, o Marques Siqueira Advogados Associados tem acumulado experiência na prestação dos serviços
-          jurídicos que desenvolve, atuando como um parceiro estratégico dos seus Clientes na busca da solução jurídica mais
+        <p style="text-align: justify" class="lead mb-xl mt-lg">Ao longo da sua existência, o Marques Siqueira
+          Advogados Associados tem acumulado experiência na prestação dos serviços
+          jurídicos que desenvolve, atuando como um parceiro estratégico dos seus Clientes na busca da solução jurídica
+          mais
           eficiente e adequada a cada um.</p>
-        <p style="text-align: justify">O Escritório presta serviços nos principais ramos do Direito, sendo suas atividades focadas principalmente nas áreas
-          do Direito Civil, Trabalhista, Tributário, Comercial, Previdenciário, Relação de Consumo, Propriedade Intelectual
+        <p style="text-align: justify">O Escritório presta serviços nos principais ramos do Direito, sendo suas
+          atividades focadas principalmente nas áreas
+          do Direito Civil, Trabalhista, Tributário, Comercial, Previdenciário, Relação de Consumo, Propriedade
+          Intelectual
           e Direito Administrativo.</p>
-        <p style="text-align: justify">Além de Goiás, o Escritório atua diretamente em vários Estados do Brasil, como Rio de Janeiro, São Paulo, Rio Grande
-          do Sul, Mato Grosso, Sergipe, Minas Gerais, Tocantins, Paraná, Espírito Santo, Santa Catarina, Distrito Federal
-          e outros. Em Brasília, a atuação é regular, com a presença de advogados para agilizar e acompanhar com mais eficiência
+        <p style="text-align: justify">Além de Goiás, o Escritório atua diretamente em vários Estados do Brasil, como
+          Rio de Janeiro, São Paulo, Rio Grande
+          do Sul, Mato Grosso, Sergipe, Minas Gerais, Tocantins, Paraná, Espírito Santo, Santa Catarina, Distrito
+          Federal
+          e outros. Em Brasília, a atuação é regular, com a presença de advogados para agilizar e acompanhar com mais
+          eficiência
           os processos que tramitam nos Tribunais Superiores.</p>
         <br />
-        <div class="row mt-lg">
-          <div class="col-md-4">
+        <div class="row mt-xl">
+          <div class="col-md-6" *ngFor="let area of areas | async">
             <div class="feature-box feature-box-style-2 mb-xl">
               <div class="feature-box-icon">
-                <img src="../../assets/img/icons/criminal-law.png" alt="" />
+                <img src="{{ area.imagem }}" alt="" />
               </div>
               <div class="feature-box-info ml-md">
-                <h4 class="mb-sm">Acesso ao STJ</h4>
-                <p>Atuação constante e qualificada no Superior Tribunal de Justiça (STJ), em Brasília...</p>
-                <a class="mt-md" [routerLink]="['/areas-detalhe']">Saiba mais
-                  <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="feature-box feature-box-style-2 mb-xl">
-              <div class="feature-box-icon">
-                <img src="../../assets/img/icons/business-law.png" alt="" />
-              </div>
-              <div class="feature-box-info ml-md">
-                <h4 class="mb-sm">Direito Civil</h4>
-                <p>Assessoria para elaboração e análise de contratos civis em geral. Confecção de defesas...</p>
-                <a class="mt-md" href="areas-atuacao/direito-civil.html">Saiba mais
-                  <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="feature-box feature-box-style-2 mb-xl">
-              <div class="feature-box-icon">
-                <img src="../../assets/img/icons/health-law.png" alt="" />
-              </div>
-              <div class="feature-box-info ml-md">
-                <h4 class="mb-sm">Direito Trabalhista</h4>
-                <p>Advocacia Preventiva, acompanhamento das Rotinas, Normas e Regulamentos da Empresa...</p>
-                <a class="mt-md" href="areas-atuacao/direito-trabalhista.html">Saiba mais
-                  <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-md mb-xl">
-          <div class="col-md-4">
-            <div class="feature-box feature-box-style-2 mb-xl">
-              <div class="feature-box-icon">
-                <img src="../../assets/img/icons/divorce-law.png" alt="" />
-              </div>
-              <div class="feature-box-info ml-md">
-                <h4 class="mb-sm">Direito Previdenciário</h4>
-                <p>Consultoria preventiva nas empresas e entes públicos, Análise de processos para concessão...</p>
-                <a class="mt-md" href="areas-atuacao/direito-previdenciario.html">Saiba mais
-                  <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="feature-box feature-box-style-2 mb-xl">
-              <div class="feature-box-icon">
-                <img src="../../assets/img/icons/capital-law.png" alt="" />
-              </div>
-              <div class="feature-box-info ml-md">
-                <h4 class="mb-sm">Direito Comercial</h4>
-                <p>Consultoria e resolução de problemas relativos a contratos e obrigações comerciais...</p>
-                <a class="mt-md" href="areas-atuacao/direito-comercial.html">Saiba mais
-                  <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="feature-box feature-box-style-2 mb-xl">
-              <div class="feature-box-icon">
-                <img src="../../assets/img/icons/accident-law.png" alt="" />
-              </div>
-              <div class="feature-box-info ml-md">
-                <h4 class="mb-sm">Relação de Consumo</h4>
-                <p>Assessoria na defesa dos interesses dos clientes em questões relacionadas ao consumo...</p>
-                <a class="mt-md" href="areas-atuacao/relacao-de-consumo.html">Saiba mais
-                  <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-md mb-xl">
-          <div class="col-md-4">
-            <div class="feature-box feature-box-style-2 mb-xl">
-              <div class="feature-box-icon">
-                <img src="../../assets/img/icons/divorce-law.png" alt="" />
-              </div>
-              <div class="feature-box-info ml-md">
-                <h4 class="mb-sm">Direito Médico e Odontológico</h4>
-                <p>Assessoria e consultoria na via judicial e administrativa especializada em questões...</p>
-                <a class="mt-md" href="areas-atuacao/direito-medico.html">Saiba mais
-                  <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="feature-box feature-box-style-2 mb-xl">
-              <div class="feature-box-icon">
-                <img src="../../assets/img/icons/capital-law.png" alt="" />
-              </div>
-              <div class="feature-box-info ml-md">
-                <h4 class="mb-sm">Direito Administrativo</h4>
-                <p>Assessoria em processos de licitação e procedimentos administrativos em geral...</p>
-                <a class="mt-md" href="areas-atuacao/direito-administrativo.html">Saiba mais
-                  <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="feature-box feature-box-style-2 mb-xl">
-              <div class="feature-box-icon">
-                <img src="../../assets/img/icons/accident-law.png" alt="" />
-              </div>
-              <div class="feature-box-info ml-md">
-                <h4 class="mb-sm">Direito Societário</h4>
-                <p>Constituição de sociedades, em especial sociedades limitadas, sociedades anônimas...</p>
-                <a class="mt-md" href="areas-atuacao/direito-societario.html">Saiba mais
-                  <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-md mb-xl">
-          <div class="col-md-4">
-            <div class="feature-box feature-box-style-2 mb-xl">
-              <div class="feature-box-icon">
-                <img src="../../assets/img/icons/divorce-law.png" alt="" />
-              </div>
-              <div class="feature-box-info ml-md">
-                <h4 class="mb-sm">Metrologia Legal</h4>
-                <p>O Escritório Marques Siqueira Advogados Associados é pioneiro nas ações de anulação das multas impostas ilegalmente
-                  pelo Inmetro e seus conveniados...</p>
-                <a class="mt-md" href="areas-atuacao/metrologia-legal.html">Saiba mais
-                  <i class="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="feature-box feature-box-style-2 mb-xl">
-              <div class="feature-box-icon">
-                <img src="../../assets/img/icons/capital-law.png" alt="" />
-              </div>
-              <div class="feature-box-info ml-md">
-                <h4 class="mb-sm">Fusões, Incorporações, Compra e Venda Corporativa</h4>
-                <p>A Marques Siqueira Advogados possui experiência em fusões, incorporações e outras operações corporativas...</p>
-                <a class="mt-md" href="areas-atuacao/fusoes-incorporacoes.html">Saiba mais
+                <h4 class="mb-sm">{{ area.nome }}</h4>
+                <p>{{ area.subtitulo }}</p>
+                <a class="mt-md" [routerLink]="['/areas-detalhe', area.id]">Saiba mais
                   <i class="fa fa-long-arrow-right"></i>
                 </a>
               </div>

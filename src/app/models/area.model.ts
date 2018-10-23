@@ -5,4 +5,5 @@ export interface AreaAtuacaoModel {
     descricao?: string;
     servicos?: string;
     imagem?: string;
+    home?: boolean;
 }

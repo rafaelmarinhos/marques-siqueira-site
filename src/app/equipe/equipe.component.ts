@@ -10,6 +10,11 @@ import { ActivatedRoute } from '../../../node_modules/@angular/router';
 })
 export class EquipeComponent implements OnInit {
 
+  advogado: boolean;
+  consultor: boolean;
+  apoio: boolean;
+  estagio: boolean;
+
   private funcionariosColecao: AngularFirestoreCollection<AssociadoModel>;
   funcionarios: Observable<AssociadoModel[]>;
 
@@ -18,6 +23,12 @@ export class EquipeComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
+      this.advogado = params['tipo'] === 'advogado';
+      this.consultor = params['tipo'] === 'consultor';
+      this.apoio = params['tipo'] === 'apoio';
+      this.estagio = params['tipo'] === 'estagio';
+
+
       this.funcionariosColecao = this.DB.collection<AssociadoModel>('funcionarios', ref => ref.where('tipo', '==', params['tipo']));
       this.funcionarios = this.funcionariosColecao.valueChanges();
     });

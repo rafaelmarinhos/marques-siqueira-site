@@ -4,21 +4,21 @@
       <div class="col-sm-12">
         <div class="row mt-xl mb-xl">
           <div class="col-sm-4 center">
-            <img src="../../assets/img/equipe/eduardo.jpg" class="img-responsive mb-xl" alt="">
+            <img src="{{ (equipe | async)?.imagem }}" class="img-responsive mb-xl" alt="">
           </div>
           <div class="col-sm-8">
-            <h1 class="mt-none mb-none">Eduardo da Costa Silva</h1>
-            <p class="lead">Advogado Sócio</p>
+            <h1 class="mt-none mb-none">{{ (equipe | async)?.nome }}</h1>
+            <p class="lead">{{ (equipe | async)?.posicao }}</p>
             <div class="divider divider-primary divider-small mb-xl">
               <hr>
             </div>
             <ul class="list list-icons">
               <li>
                 <i class="fa fa-certificate"></i>
-                <strong>OAB/GO:</strong> Nº 22.018</li>
+                <strong>{{ (equipe | async)?.OAB }}</strong></li>
               <li>
                 <i class="fa fa-envelope"></i>
-                <strong>Email:</strong> eduardo@marquessiqueira.com.br</li>
+                <strong>Email:</strong> {{ (equipe | async)?.email }}</li>
             </ul>
             <span class="thumb-info-social-icons p-none mt-lg pt-lg">
               <a href="http://www.facebook.com" target="_blank">
@@ -38,9 +38,7 @@
         </div>
         <div class="row mt-xl">
           <div class="col-sm-12">
-            <p style="text-align: justify" class="lead pb-xl">Especialista em Direito Administrativo pela FACH/IDAG e em Direito Processual pela FESURV. Pós-graduado em Direito
-              e Processo do Trabalho pela Universidade Federal de Goiás. Bacharel em Direito pela Universidade Federal de
-              Goiás. Autor de artigos jurídicos.</p>
+            <p style="text-align: justify" class="lead pb-xl">{{ (equipe | async)?.descricao }}</p>
           </div>
         </div>
       </div>

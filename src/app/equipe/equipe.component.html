@@ -2,14 +2,17 @@
   <div class="container">
     <div class="row pt-xl">
       <div class="col-md-12">
-        <h1 class="mt-xl mb-none">Equipe de Advogados</h1>
+        <h1 *ngIf="advogado" class="mt-xl mb-none">Equipe de Advogados</h1>
+        <h1 *ngIf="consultor" class="mt-xl mb-none">Equipe de Consultores</h1>
+        <h1 *ngIf="apoio" class="mt-xl mb-none">Equipe de Apoio</h1>
+        <h1 *ngIf="estagio" class="mt-xl mb-none">Equipe de Estagiários</h1>
         <div class="divider divider-primary divider-small mb-xl">
           <hr>
         </div>
         <div class="row">
           <ul class="team-list mt-xs">
             <li class="col-md-3 col-sm-6 mb-xl center isotope-item criminal-law new-york" *ngFor="let funcionario of funcionarios | async">
-              <a [routerLink]="['/equipe-detalhe']">
+              <a [routerLink]="['/equipe-detalhe', funcionario.id]">
                 <span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
                   <span class="thumb-info-wrapper">
                     <img src="{{ funcionario.imagem }}" class="img-responsive" alt="">

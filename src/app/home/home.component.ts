@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
     this.funcionariosColecao = this.DB.collection<AssociadoModel>('funcionarios', ref => ref.where('tipo', '==', 'advogado'));
     this.funcionarios = this.funcionariosColecao.valueChanges();
 
-    this.areasColecao = this.DB.collection<AreaAtuacaoModel>('areas', ref => ref.orderBy('nome'));
+    this.areasColecao = this.DB.collection<AreaAtuacaoModel>('areas', ref => ref.where('home', '==', true));
     this.areas = this.areasColecao.valueChanges();
 
     this.DB.doc<ParametrosModel>(`/parametros/${Constantes.parametros_id}`)

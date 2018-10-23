@@ -12,11 +12,11 @@
             data-transform_in="y:[-300%];opacity:0;s:500;">BEM VINDO À MARQUES SIQUEIRA</div>
 
           <div class="tp-caption main-label" data-x="left" data-hoffset="100" data-y="center" data-voffset="-45" data-start="1500"
-            data-whitespace="nowrap" data-transform_in="y:[100%];s:500;" data-transform_out="opacity:0;s:500;" style="z-index: 5"
-            data-mask_in="x:0px;y:0px;">NOSSO LEMA</div>
+            data-whitespace="nowrap" data-transform_in="y:[100%];s:500;" data-transform_out="opacity:0;s:500;" style="z-index: 5; font-size: 45px;"
+            data-mask_in="x:0px;y:0px;">DISPONIBILIDADE, AGILIDADE E COMPETÊNCIA</div>
 
           <div class="tp-caption bottom-label" data-x="left" data-hoffset="100" data-y="center" data-voffset="5" data-start="2000"
-            style="z-index: 5" data-transform_in="y:[100%];opacity:0;s:500;">Disponibilidade, Agilidade e Competência</div>
+            style="z-index: 5" data-transform_in="y:[100%];opacity:0;s:500;">É o nosso lema</div>
 
           <a class="tp-caption btn btn-primary btn-lg" [routerLink]="['/sobre']" data-x="left" data-hoffset="100" data-y="center" data-voffset="80"
             data-start="2500" data-whitespace="nowrap" data-transform_in="y:[100%];s:500;" data-transform_out="opacity:0;s:500;"
@@ -129,94 +129,22 @@
         </div>
       </div>
     </div>
-    <div class="row mt-lg">
-      <div class="col-md-4" *ngFor="let area of areas | async">
+    <div class="row mt-xl">
+      <div class="col-md-6" *ngFor="let area of areas | async">
         <div class="feature-box feature-box-style-2 mb-xl">
           <div class="feature-box-icon">
             <img src="{{ area.imagem }}" alt="" />
           </div>
           <div class="feature-box-info ml-md">
             <h4 class="mb-sm">{{ area.nome }}</h4>
-            <p>{{ area.subtitulo }}</p>
-            <a class="mt-md" href="areas-atuacao/acesso-stj.html">Saiba mais
+            <p style="text-align: justify;">{{ area.subtitulo }}</p>
+            <a class="mt-md" [routerLink]="['/areas-detalhe', area.id]">Saiba mais
               <i class="fa fa-long-arrow-right"></i>
             </a>
           </div>
         </div>
       </div>
-      <!-- <div class="col-md-4">
-        <div class="feature-box feature-box-style-2 mb-xl">
-          <div class="feature-box-icon">
-            <img src="../../assets/img/icons/business-law.png" alt="" />
-          </div>
-          <div class="feature-box-info ml-md">
-            <h4 class="mb-sm">Direito Civil</h4>
-            <p>Assessoria para elaboração e análise de contratos civis em geral. Confecção de defesas...</p>
-            <a class="mt-md" href="areas-atuacao/direito-civil.html">Saiba mais
-              <i class="fa fa-long-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature-box feature-box-style-2 mb-xl">
-          <div class="feature-box-icon">
-            <img src="../../assets/img/icons/health-law.png" alt="" />
-          </div>
-          <div class="feature-box-info ml-md">
-            <h4 class="mb-sm">Direito Trabalhista</h4>
-            <p>Advocacia Preventiva, acompanhamento das Rotinas, Normas e Regulamentos da Empresa...</p>
-            <a class="mt-md" href="areas-atuacao/direito-trabalhista.html">Saiba mais
-              <i class="fa fa-long-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div> -->
     </div>
-    <!-- <div class="row mt-lg">
-      <div class="col-md-4">
-        <div class="feature-box feature-box-style-2 mb-xl">
-          <div class="feature-box-icon">
-            <img src="../../assets/img/icons/divorce-law.png" alt="" />
-          </div>
-          <div class="feature-box-info ml-md">
-            <h4 class="mb-sm">Direito Previdenciário</h4>
-            <p>Consultoria preventiva nas empresas e entes públicos, Análise de processos para concessão...</p>
-            <a class="mt-md" href="areas-atuacao/direito-previdenciario.html">Saiba mais
-              <i class="fa fa-long-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature-box feature-box-style-2 mb-xl">
-          <div class="feature-box-icon">
-            <img src="../../assets/img/icons/capital-law.png" alt="" />
-          </div>
-          <div class="feature-box-info ml-md">
-            <h4 class="mb-sm">Direito Comercial</h4>
-            <p>Consultoria e resolução de problemas relativos a contratos e obrigações comerciais...</p>
-            <a class="mt-md" href="areas-atuacao/direito-comercial.html">Saiba mais
-              <i class="fa fa-long-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature-box feature-box-style-2 mb-xl">
-          <div class="feature-box-icon">
-            <img src="../../assets/img/icons/accident-law.png" alt="" />
-          </div>
-          <div class="feature-box-info ml-md">
-            <h4 class="mb-sm">Relação de Consumo</h4>
-            <p>Assessoria na defesa dos interesses dos clientes em questões relacionadas ao consumo...</p>
-            <a class="mt-md" href="areas-atuacao/relacao-de-consumo.html">Saiba mais
-              <i class="fa fa-long-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 
   <!-- EQUIPE
